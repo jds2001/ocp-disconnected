@@ -18,7 +18,7 @@ else some time typing.
  1. A CentOS machine to operate as the bastion. This requires Internet access
 minimally to quay.io in order to mirror the images to the local registry.
  2. A local registry. Here, I've included a file `poc-registry.service` which
-is a systemd unit (shamlessly stolen from [this repo](https://github.com/openshift-telco/openshift4x-poc) that will start up a local registry using `podman`. You'll
+is a systemd unit (shamlessly stolen from [this repo](https://github.com/openshift-telco/openshift4x-poc)) that will start up a local registry using `podman`. You'll
 need to follow the instructions on the above referenced page in order to
 set up the registry (setting up certs, etc).
  3. A webserver to host the ignition files, as well as the CoreOS disk image.

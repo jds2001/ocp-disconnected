@@ -1,0 +1,64 @@
+apiVersion: v1
+additionalTrustBundle: |
+      -----BEGIN CERTIFICATE-----
+      MIIFmTCCA4GgAwIBAgIJAOeNZJqtx2clMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNV
+      BAYTAlVTMREwDwYDVQQIDAhOZXcgWW9yazERMA8GA1UEBwwITmV3IFlvcmsxFTAT
+      BgNVBAoMDFNvbWUgQ29tcGFueTEXMBUGA1UEAwwOcmVnaXN0cnkubG9jYWwwHhcN
+      MTkwOTE4MDMyNzEwWhcNMjAwOTE3MDMyNzEwWjBjMQswCQYDVQQGEwJVUzERMA8G
+      A1UECAwITmV3IFlvcmsxETAPBgNVBAcMCE5ldyBZb3JrMRUwEwYDVQQKDAxTb21l
+      IENvbXBhbnkxFzAVBgNVBAMMDnJlZ2lzdHJ5LmxvY2FsMIICIjANBgkqhkiG9w0B
+      AQEFAAOCAg8AMIICCgKCAgEAxeLGzElVzG5E89SyVxgootZgjc1Pvg555KSBffL5
+      j+JNkcdqa9nUQLqS+1qIQwOMKr1KHbRkYrOTF0bu963x3mX1Qo/vxmllhMaN/lSm
+      nEU5suK60w3PfMBuFXds0RS+yunRxwOaP/yj9ygXzabnc0pVzWdhm/w1gr2CaYgw
+      yNYBfR1LthYngWp6U5+4Fhptwn5ZzxhBGLVi8eJDEkQIL8SjSIYV728gyP4F2DjU
+      HpiOP/RBV4EqD6nmZB1LtbI7gjWCdpoFh0A0sm7dpbhFBnlzbeRmpBTf1tBDJdfb
+      Gvsqu52ANfg9KuXh+5dXg9vL3LJeGQ5XZAIb8mrNEmq1drzKqWEVo5i+wsCcH9d9
+      rCIjStHE+o8cSG6b/9kKdIfDNNA5/a8qEWKeaX3784atVcXecmHINbeeDi/ej43b
+      LgsL/QLfZ2JvsNgNhgcPdaECJCMdqtnv9T/BxzsZi9Ai8DaIQjvg+nTOQpXN2d8K
+      ObOLTLSOPLqHnr830E4e3wWFO1ErQA3UMhd169A2LVaromBzvBsW2yiBUm3r2PyZ
+      CPekHGDncNiTb2QPvPFj/OazKwIo/uHjIjLNcxbwe1MRHR2Q12+j4BkMlkfwtCN6
+      19xGl/beR4T49YknpXym0Xrogr2lsDgwFcjkBm6oUffHYKdW2CrmavHEgj457iae
+      v+UCAwEAAaNQME4wHQYDVR0OBBYEFDmYjP15YELB3A9xismcIV+bwHQHMB8GA1Ud
+      IwQYMBaAFDmYjP15YELB3A9xismcIV+bwHQHMAwGA1UdEwQFMAMBAf8wDQYJKoZI
+      hvcNAQELBQADggIBAIT7oTJ7VUeq2H7Ngd0yMHtCCPFu4CMcWNcpQQH6jb+1O+Sd
+      lQPFGDkuvjLAJsczcJa6o+jOYs6JSXWBEaGXugTKbBOWdRZA04ryhPvJMyUwIbwX
+      Gz94CxNKk8JSLkP5feXahrrEJQPNeoq7twO8X+mvrkFVb075M47KNsWgTw4fDm6U
+      jS34zz1dAGtznC2wGl4AbSNzzG/Akan/v3zsfXHfff2u5kKr9Gyxubbfl9Pu3Cou
+      sxIan2Zw3AqR1geHf6DXRierEzqPHIh9apyakG9RhvkRVgdddiXIMOL/Pjw4rAOz
+      a7I5JsHEwDarpdTAh2nJlJsrlgkNU1ZvhkjynstVYy7D0kAXDi/c/ihV9pu3Ssjo
+      MT/p57KAtfS2Q1rZFWnM90U5D8nMwRtpp0/nMuV4BI1SGjU5UC1Yi43dEQLl2xud
+      FuEHjkmLq9QSPzI0L5VDYD9CvJXH0csR03RxRf86jYvcno3youp525MYAqvd2hPv
+      8aSJqUZjNQFw89ePUID7reVRbU27SRiY850jInLnvm1bkWau24yErgmdmenw3Nab
+      aLr2ys/3lPAVwMrDOx1GSjSAIqkzviG2CXWQRtMdbXk5g+fD2g+f+mSAlri5FrRD
+      yB0NUuy+Hwgo0IS49oJ1pYxYFtKuFXshwFUsNet4ZOsp48L+bAkWQnRoL5Ls
+      -----END CERTIFICATE-----
+baseDomain: example.local
+compute:
+- hyperthreading: Enabled   
+  name: worker
+  replicas: 1
+controlPlane:
+  hyperthreading: Enabled   
+  name: master 
+  replicas: 3
+metadata:
+  name: openshift4poc
+networking:
+  clusterNetworks:
+  - cidr: 10.128.0.0/14 
+    hostPrefix: 23 
+  networkType: OpenShiftSDN
+  serviceNetwork: 
+  - 172.30.0.0/16
+platform:
+  none: {} 
+pullSecret: '{"auths":{"registry.local:5000": {"auth": "ZHVtbXk6ZHVtbXk=","email": "noemail@localhost"}}}'
+sshKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDU/bzTEUmyq/ipId3RM2Yuah3f5ksvutXVuQ3eBiQdqWkhp1q74y14x6sSCBG+Yi6EfK+O/mtF/X8vBfRQCrKOTpD+8sI5aEM+3+EFWhtwu/lBKhWDvYoYwY45yidJf+OqKVylgHxyMJqlNEhPZbk/fpCj4n6GpmRkxNj6sTb/kO91aAjHpBRU/Ra4xjd9dMog8MVCG1LEXPICVNsNTaLBdwVqiXZvoukpjGuU2rDyReEBr97OO0G40YPl1b4/srbabRgruSObMGsUxsVcDJ13dbEAdMzqbs5bW6F1+D0cNb1DukvhTTEA5XsqM6/zMEezLdCztLpzh+tmNaTCtWSn root@localhost.localdomain'
+imageContentSources:
+    - mirrors:
+      - registry.local:5000/ocp4/openshift4
+      source: quay.io/openshift-release-dev/ocp-release-nightly
+    - mirrors:
+      - registry.local:5000/ocp4/openshift4
+      source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
+

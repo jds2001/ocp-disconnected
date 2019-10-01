@@ -31,4 +31,12 @@ of comments in it, I've included an uncommented version if you're already
 familiar with dnsmasq. Obviously change the MAC addresses to suit your
 environment.
 
+## Machines that you see in this repo
+
+172.16.1.1 - bastion server, hosts the registry
+172.16.1.2 - haproxy server
+172.16.1.10 - master1
+172.16.1.11 - master2
+172.16.1.13 - master3
+
 

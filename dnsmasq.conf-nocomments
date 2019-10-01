@@ -1,0 +1,25 @@
+domain-needed
+bogus-priv
+address=/apps.openshift4poc.example.local/172.16.1.2
+interface=eth1
+bind-interfaces
+dhcp-range=172.16.1.100,172.16.1.150,255.255.255.0,12h
+dhcp-option=3
+dhcp-option=option:dns-server,172.16.1.1
+dhcp-host=00:15:5D:B7:25:0C,master1,172.16.1.10
+dhcp-host=00:15:5D:B7:25:0D,master2,172.16.1.11
+dhcp-host=00:15:5D:B7:25:0E,master3,172.16.1.12
+dhcp-option=vendor:MSFT,2,1i
+dhcp-match=set:pxe, option:client-arch, 0 #x86-32
+dhcp-match=set:pxe-ia64, option:client-arch, 2 #IA64
+dhcp-match=set:pxe-x32, option:client-arch, 6 #x86-32???
+dhcp-match=set:pxe-x64, option:client-arch, 7 #EFI x86-64
+dhcp-boot=tag:pxe,pxelinux.0
+dhcp-boot=tag:pxe-x64,syslinux.efi
+enable-tftp
+tftp-root=/var/lib/tftpboot
+dhcp-authoritative
+srv-host=_etcd-server-ssl._tcp.openshift4poc.example.local,etcd-0.openshift4poc.example.local,2380,0,10
+srv-host=_etcd-server-ssl._tcp.openshift4poc.example.local,etcd-1.openshift4poc.example.local,2380,0,10
+srv-host=_etcd-server-ssl._tcp.openshift4poc.example.local,etcd-2.openshift4poc.example.local,2380,0,10
+conf-dir=/etc/dnsmasq.d,.rpmnew,.rpmsave,.rpmorig

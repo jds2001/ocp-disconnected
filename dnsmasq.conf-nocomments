@@ -3,12 +3,16 @@ bogus-priv
 address=/apps.openshift4poc.example.local/172.16.1.2
 interface=eth1
 bind-interfaces
+domain=openshift4poc.example.local
 dhcp-range=172.16.1.100,172.16.1.150,255.255.255.0,12h
 dhcp-option=3
 dhcp-option=option:dns-server,172.16.1.1
-dhcp-host=00:15:5D:B7:25:0C,master1,172.16.1.10
-dhcp-host=00:15:5D:B7:25:0D,master2,172.16.1.11
-dhcp-host=00:15:5D:B7:25:0E,master3,172.16.1.12
+dhcp-host=00:15:5D:B7:25:12,master1,172.16.1.10
+dhcp-host=00:15:5D:B7:25:13,master2,172.16.1.11
+dhcp-host=00:15:5D:B7:25:14,master3,172.16.1.13
+dhcp-host=00:15:5D:B7:25:15,worker1,172.16.1.14
+dhcp-host=00:15:5D:B7:25:11,bootstrap,172.16.1.20
+dhcp-option=option:domain-search,openshift4poc.example.local
 dhcp-option=vendor:MSFT,2,1i
 dhcp-match=set:pxe, option:client-arch, 0 #x86-32
 dhcp-match=set:pxe-ia64, option:client-arch, 2 #IA64

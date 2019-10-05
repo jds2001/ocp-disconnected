@@ -1,0 +1,31 @@
+{
+    "ignition": {
+        "config": {
+        },
+        "security": {
+            "tls": {
+                "certificateAuthorities": [
+                    {
+                        "source": "data:text/plain;charset=utf-8;base64,LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFRENDQWZpZ0F3SUJBZ0lJTWkwS2V1RUdpM3d3RFFZSktvWklodmNOQVFFTEJRQXdKakVTTUJBR0ExVUUKQ3hNSmIzQmxibk5vYVdaME1SQXdEZ1lEVlFRREV3ZHliMjkwTFdOaE1CNFhEVEU1TVRBd05ESXlNRFUwTlZvWApEVEk1TVRBd01USXlNRFUwTlZvd0pqRVNNQkFHQTFVRUN4TUpiM0JsYm5Ob2FXWjBNUkF3RGdZRFZRUURFd2R5CmIyOTBMV05oTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF0TnMrZ0RvNUhid08Ka3lRa09TOHlkS3BEZDJkVkpXdmthWG4vRG44Vzk3NDJ2T1dFSGpRbTZVTFdtaXBBUFBXRWxFWWIvMytkUkVJTQpXWkUraE91dC9heThHUFNBWk1sWXRwMTE0d3ZqRFI2SU1nc0ZJUHNHNGdzbWVreWJjK1JFbE1xZXBxUTNUcXJLClQ0bGwzc1V1WjJmK0xmaEFkK2RHV3NTTWs1L0h5Rm0zT2NPZENMOS8yM0N0UXUyNXUvbDJndCtQTUZ4c2VaWHoKN1hJRTdSSStKeEZHZ1E3MW5rYWhNbzNNbzBueVlEM2FiaE5tQnlDdk45U2VVM1RRNy8vaHpTeldzcWRJUXhmKwo3ZGhwdnV5aXJMeXpJZ0pWMnFxb0x2WjB4MGFabWhiaWdSejdpaHhZUE05YUQ0V2ZnelUvdzdycGRmQjZCK2ZiCk1ON3A2bkJ4UXdJREFRQUJvMEl3UURBT0JnTlZIUThCQWY4RUJBTUNBcVF3RHdZRFZSMFRBUUgvQkFVd0F3RUIKL3pBZEJnTlZIUTRFRmdRVUNYSUJYYzR4Z0kzZkQwb3U3aCtVS1V1UmluUXdEUVlKS29aSWh2Y05BUUVMQlFBRApnZ0VCQUVRbDRGNnhjMTJyZENLdkpENkhCb05IelRyc1doYUFCNGpjRzcyTGxwTmE0cHdZSDVhMm9ETlhGUGhqClpPenE4ZUlpNnpMTUc3TGg1b1k1QktxUHZUN0RiZmZPenVjVkE4Tm16cWY1bFAzQVBMcUdGMGdlYllETUp6VU8KTFpPZHQzeWZlbmNqdlZrRk5KRE5oSVJwS2tnRmZGTTBLRk9qNkRhc2ZDQ1QxYndWYVdzQTB5dDh0WmY3TFdPcQpQQ0VxNEQzUzZOV3dIWGJVdVhHakE1Wmk4SW9tRG5oTGxpRWxUVzdxMW9BTGNRTHV3YS9zWXh2TWEvbkZnRiszCmF5VG56MkYzVHdETE9EbW0yaUtFS2pla3BGQkpkL1hlQ2NvNEh2RWNwT0FDWm84ek5CTTE5QzlVOG9rd0Y2a0wKcjdManhHdnY5WGxuekpGTzdKUnE5TVRFZWh3PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+                        "verification": {}
+                    }
+                ]
+            }
+        },
+        "timeouts": {},
+        "version": "2.2.0"
+    },
+    "networkd": {},
+    "passwd": {
+        "users": [
+            {
+                "name": "core",
+                "sshAuthorizedKeys": [
+                    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDU/bzTEUmyq/ipId3RM2Yuah3f5ksvutXVuQ3eBiQdqWkhp1q74y14x6sSCBG+Yi6EfK+O/mtF/X8vBfRQCrKOTpD+8sI5aEM+3+EFWhtwu/lBKhWDvYoYwY45yidJf+OqKVylgHxyMJqlNEhPZbk/fpCj4n6GpmRkxNj6sTb/kO91aAjHpBRU/Ra4xjd9dMog8MVCG1LEXPICVNsNTaLBdwVqiXZvoukpjGuU2rDyReEBr97OO0G40YPl1b4/srbabRgruSObMGsUxsVcDJ13dbEAdMzqbs5bW6F1+D0cNb1DukvhTTEA5XsqM6/zMEezLdCztLpzh+tmNaTCtWSn root@localhost.localdomain"
+                ]
+            }
+        ]
+},
+    "storage": {},
+    "systemd": {}
+}

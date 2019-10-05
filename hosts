@@ -1,13 +1,13 @@
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-172.16.1.1 registry.local
-172.16.1.2 api.openshift4poc.example.local
-172.16.1.2 api-int.openshift4poc.example.local
-172.16.1.10 etcd-0.openshift4poc.example.local
-172.16.1.11 etcd-1.openshift4poc.example.local
-172.16.1.13 etcd-2.openshift4poc.example.local
-172.16.1.10 master1.openshift4poc.example.local
-172.16.1.11 master2.openshift4poc.example.local
-172.16.1.13 master3.openshift4poc.example.local
-172.16.1.14 worker1.openshift4poc.example.local
-172.16.1.20 bootstrap.openshift4.example.local
+172.16.1.1 registry.test
+172.16.1.2 api.openshift4poc.example.test
+172.16.1.2 api-int.openshift4poc.example.test
+172.16.1.10 master1.openshift4poc.example.test
+172.16.1.11 master2.openshift4poc.example.test
+172.16.1.13 master3.openshift4poc.example.test
+172.16.1.10 etcd-0.openshift4poc.example.test
+172.16.1.11 etcd-1.openshift4poc.example.test
+172.16.1.13 etcd-2.openshift4poc.example.test
+172.16.1.14 worker1.openshift4poc.example.test
+172.16.1.20 bootstrap.openshift4poc.example.test
